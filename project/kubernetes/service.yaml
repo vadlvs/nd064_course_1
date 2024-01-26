@@ -5,7 +5,7 @@ metadata:
   namespace: sandbox
 spec:
   selector:
-    app: techtrends-sandbox
+    app: techtrends
   ports:
   - protocol: TCP
     port: 4111

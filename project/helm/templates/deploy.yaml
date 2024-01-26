@@ -3,20 +3,20 @@ kind: Deployment
 metadata:
   name: techtrends
   labels:
-    app: techtrends-{{ .Values.namespace.name }}
+    app: techtrends
   namespace: {{ .Values.namespace.name }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: techtrends-{{ .Values.namespace.name }}
+      app: techtrends
   template:
     metadata:
       labels:
-        app: techtrends-{{ .Values.namespace.name }}
+        app: techtrends
     spec:
       containers:
-      - name: techtrends-{{ .Values.namespace.name }}
+      - name: techtrends
         image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         ports:

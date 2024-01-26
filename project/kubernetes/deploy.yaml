@@ -3,20 +3,20 @@ kind: Deployment
 metadata:
   name: techtrends
   labels:
-    app: techtrends-sandbox
+    app: techtrends
   namespace: sandbox
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: techtrends-sandbox
+      app: techtrends
   template:
     metadata:
       labels:
-        app: techtrends-sandbox
+        app: techtrends
     spec:
       containers:
-      - name: techtrends-sandbox
+      - name: techtrends
         image: vadlvs/techtrends:latest
         ports:
         - containerPort: 3111
